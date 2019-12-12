@@ -24,7 +24,7 @@ class TestController extends Controller
         //     dump($t->startup);
         //  }
         
-        //  dd($employee);
+        //  dd($employee)
 
         return view ('test', compact ('startup'));
 
