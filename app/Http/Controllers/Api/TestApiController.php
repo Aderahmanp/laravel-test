@@ -9,14 +9,22 @@ class TestApiController
 {
     public function employee()
     {
-        $employees = Employee::with('startup')->get();
+        $employees = Employee::where('id',100)->with('startup')->get();
 
-        $response = [
-            "status" => "success",
-            "data" => $employees
-        ];
+        if (count($employees) !== 0) {
+            $response = [
+                "data" => $employees
+            ];
 
-        return response()->json($response, 200);
+            return response()->json($response, 200);
+        } else {
+            $response = [
+                "data" => $employees
+            ];
+
+            return response()->json($response,400);
+        }
+
     }
 
 }
