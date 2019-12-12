@@ -8,8 +8,8 @@
     <tbody>
     @foreach($employees as $employee)
         <tr>
-            <td>ucup</td>
-            <td>alfabeta</td>
+            <td>{{$employee->username}}</td>
+            <td>{{$employee->startup->name}}</td>
         </tr>
     @endforeach
     </tbody>
