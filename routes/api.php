@@ -13,5 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
+
+// Employeee
+
 Route::get('employee', 'Api\TestApiController@employee')->name('api-employee');
 Route::post('employee', 'Api\TestApiController@employeePost')->name('api-employee-post');
+Route::post('employee/detail', 'Api\TestApiController@employeeDetail')->name('api-employee-detail');
+
+// Startup
+
+Route::get('startup', 'Api\TestApiController@startup')->name('api-startup');
