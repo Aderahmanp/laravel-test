@@ -9,10 +9,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($employee as $a)
+						@foreach($startup as $a)
 						<tr>
-							<td>{{ $a->startup_id }}</td>
-							
+							<td>{{ $a->name }}</td>
+							@foreach($a->employees as $b )
+							<td>{{ $b->username }}</td>
+							@endforeach
 						</tr>
 						@endforeach
 					</tbody>

@@ -10,7 +10,7 @@ class TestController extends Controller
 {
     public function index() {
         $startup = Startup::with('employees')->get();
-        $employee = Employee::with('startup')->get();
+        // $employee = Employee::with('startup')->get();
 
         // foreach ($startup as $t) {
         
@@ -19,12 +19,14 @@ class TestController extends Controller
        
         // dd($startup);
 
-        foreach ($employee as $t) {
+        // foreach ($employee as $t) {
         
-            dump($t->startup);
-         }
+        //     dump($t->startup);
+        //  }
         
         //  dd($employee);
+
+        return view ('test', compact ('startup'));
 
        
 
