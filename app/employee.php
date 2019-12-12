@@ -9,6 +9,6 @@ class employee extends Model
 
     public function startup()
     {
-        return $this->belongsTo('App\Startup', 'startup_id');
+        return $this->belongsTo(Startup::class);
     }
 }
