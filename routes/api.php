@@ -14,3 +14,4 @@ use Illuminate\Http\Request;
 */
 
 Route::get('employee', 'Api\TestApiController@employee')->name('api-employee');
+Route::post('employee', 'Api\TestApiController@employeePost')->name('api-employee-post');

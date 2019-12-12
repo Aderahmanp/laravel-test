@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\employee;
+use Illuminate\Http\Request;
 
 class TestApiController
 {
@@ -25,6 +26,14 @@ class TestApiController
             return response()->json($response,400);
         }
 
+    }
+
+    public function employeePost(Request $request)
+    {
+        echo '<pre>';
+        var_dump($request->all());
+        echo '</pre>';
+        die();
     }
 
 }
